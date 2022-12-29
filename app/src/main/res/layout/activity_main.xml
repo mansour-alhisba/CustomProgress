@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_view_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="22dp"
+        android:text="@string/performance"
+        android:textColor="@color/purple_500"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:id="@+id/rating"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="22dp"
+        android:progressTint="@color/purple_500"
+        android:rating="2.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_view_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="2.5"
+        android:textColor="@color/purple_500"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/rating"
+        app:layout_constraintTop_toTopOf="@id/rating" />
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/card_performance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/text_view_title">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.demod.customview.CustomProgress
+                    android:id="@+id/progress_acceptance"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:paddingHorizontal="10dp"
+                    android:paddingTop="10dp"
+                    app:ap_progress_color="@color/purple_500"
+                    app:ap_progress_with_animation="0"
+                    app:layout_constraintDimensionRatio="91:86"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textColor="@color/purple_500"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/progress_acceptance"
+                    app:layout_constraintEnd_toEndOf="@id/progress_acceptance"
+                    app:layout_constraintStart_toStartOf="@id/progress_acceptance"
+                    app:layout_constraintTop_toTopOf="@id/progress_acceptance" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Acceptance \n 0/90"
+                    android:textColor="@color/teal_200"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="@id/progress_acceptance"
+                    app:layout_constraintStart_toStartOf="@id/progress_acceptance"
+                    app:layout_constraintTop_toBottomOf="@id/progress_acceptance" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.demod.customview.CustomProgress
+                    android:id="@+id/progress_cancellation"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:paddingHorizontal="10dp"
+                    android:paddingTop="10dp"
+                    app:ap_progress_color="@color/purple_500"
+                    app:ap_progress_with_animation="192"
+                    app:layout_constraintDimensionRatio="91:86"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="60%"
+                    android:textColor="@color/purple_500"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/progress_cancellation"
+                    app:layout_constraintEnd_toEndOf="@id/progress_cancellation"
+                    app:layout_constraintStart_toStartOf="@id/progress_cancellation"
+                    app:layout_constraintTop_toTopOf="@id/progress_cancellation" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Cancellation \n 10/75"
+                    android:textColor="@color/teal_200"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="@id/progress_cancellation"
+                    app:layout_constraintStart_toStartOf="@id/progress_cancellation"
+                    app:layout_constraintTop_toBottomOf="@id/progress_cancellation" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.demod.customview.CustomProgress
+                    android:id="@+id/progress_revenue"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:paddingHorizontal="10dp"
+                    android:paddingTop="10dp"
+                    app:ap_progress_color="@color/purple_500"
+                    app:ap_progress_with_animation="320"
+                    app:layout_constraintDimensionRatio="91:86"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100%"
+                    android:textColor="@color/purple_500"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/progress_revenue"
+                    app:layout_constraintEnd_toEndOf="@id/progress_revenue"
+                    app:layout_constraintStart_toStartOf="@id/progress_revenue"
+                    app:layout_constraintTop_toTopOf="@id/progress_revenue" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="Cancellation \n 10/75"
+                    android:textColor="@color/teal_200"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="@id/progress_revenue"
+                    app:layout_constraintStart_toStartOf="@id/progress_revenue"
+                    app:layout_constraintTop_toBottomOf="@id/progress_revenue" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_view_shipments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="17dp"
+        android:text="@string/shipments"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_performance" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear_shipments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintTop_toBottomOf="@id/text_view_shipments">
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10sp"
+            android:layout_weight="1"
+            android:text="@string/delivered"
+            android:textSize="13sp"
+            app:strokeColor="@color/purple_500" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10sp"
+            android:layout_weight="1"
+            android:text="@string/canceled"
+            android:textSize="13sp"
+            app:strokeColor="@color/purple_500" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10sp"
+            android:layout_weight="1"
+            android:text="@string/rescedule"
+            android:textSize="13sp"
+            app:strokeColor="@color/purple_500" />
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_view_jan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="17dp"
+        android:text="Jan"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_shipments" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_view_jan"
+        app:layout_constraintStart_toEndOf="@+id/text_view_jan"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="5dp"
+        />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_view_feb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="17dp"
+        android:text="Feb"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="30dp"
+        />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="0dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_view_feb"
+        app:layout_constraintStart_toEndOf="@+id/text_view_feb"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="5dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

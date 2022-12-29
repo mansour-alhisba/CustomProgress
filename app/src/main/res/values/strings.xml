@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DemoD</string>
+    <string name="performance">Performance</string>
+    <string name="shipments">Shipments</string>
+    <string name="delivered">Delivered</string>
+    <string name="canceled">Canceled</string>
+    <string name="rescedule">Rescedule</string>
+    <string name="dialog_title_permission">Please enable all permissions</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+
+</resources>

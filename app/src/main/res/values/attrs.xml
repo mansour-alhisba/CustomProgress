@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ArcProgress">
+        /**
+        This Attribute will Set color of Progress.
+        This Attribute take color as input
+        **/
+        <attr name="ap_progress_color" format="color" />
+        /**
+        This Attribute will Set background color of Progress.
+        This Attribute take color as input
+        **/
+        <attr name="ap_progress_background_color" format="color" />
+        /**
+        This Attribute will set thickness of upper layer of Progressbar.
+        This Attribute take Float as input
+        **/
+        <attr name="ap_foreground_progressbar_width" format="float" />
+        /**
+        This Attribute will set progress on progressbar.
+        This Attribute take Float as input
+        **/
+        <attr name="ap_progress_with_animation" format="float" />
+
+        <attr name="ap_progress" format="float" />
+        /**
+        This attribute set progress maxscale for your progressbar.
+        **/
+        <attr name="ap_progress_maxscale" format="float" />
+        /**
+        This attribute enable click listener on progressbar.
+        **/
+        <attr name="ap_progress_touchEnabled" format="boolean" />
+
+        <attr name="progressWidth" format="dimension" />
+        <attr name="android_textSize" format="dimension" />
+
+    </declare-styleable>x
+
+
+</resources>
